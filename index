@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ashishdesigns | Portfolio</title>
+  <style>
+    :root {
+      --yellow: #f4dd29;
+      --black: #000000;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 4rem;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .hero-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.75;
+    }
+
+    .yellow-circle {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: var(--yellow);
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .yellow-circle img {
+      width: 70%;
+    }
+
+    .projects {
+      padding: 4rem;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 2px solid var(--black);
+      border-radius: 14px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    footer {
+      padding: 2rem 4rem;
+      margin-top: auto;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/mnt/data/Logo-01.jpg" alt="Logo" />
+    </div>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm <span style="color: var(--yellow)">Ashish</span>.</h1>
+      <h1>I design modern visuals.</h1>
+      <p>A minimal & bold portfolio built with your brand colors.</p>
+    </div>
+    <div class="yellow-circle">
+      <img src="/mnt/data/Logo-01.jpg" alt="Logo Circle" />
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="project-card">Project 01</div>
+      <div class="project-card">Project 02</div>
+      <div class="project-card">Project 03</div>
+      <div class="project-card">Project 04</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ashishdesigns — All rights reserved.
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
